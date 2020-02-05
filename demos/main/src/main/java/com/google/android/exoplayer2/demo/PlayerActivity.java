@@ -15,6 +15,7 @@
  */
 package com.google.android.exoplayer2.demo;
 
+import android.app.Application;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaDrm;
@@ -77,6 +78,7 @@ import com.google.android.exoplayer2.upstream.DataSource;
 import com.google.android.exoplayer2.upstream.HttpDataSource;
 import com.google.android.exoplayer2.util.ErrorMessageProvider;
 import com.google.android.exoplayer2.util.EventLogger;
+import com.google.android.exoplayer2.util.Log;
 import com.google.android.exoplayer2.util.Util;
 import java.lang.reflect.Constructor;
 import java.net.CookieHandler;
@@ -547,6 +549,7 @@ public class PlayerActivity extends AppCompatActivity
   }
 
   private void releasePlayer() {
+    Log.e("releasePlayer","start");
     if (player != null) {
       updateTrackSelectorParameters();
       updateStartPosition();
@@ -560,6 +563,7 @@ public class PlayerActivity extends AppCompatActivity
     if (adsLoader != null) {
       adsLoader.setPlayer(null);
     }
+    Log.e("releasePlayer","End");
   }
 
   private void releaseAdsLoader() {

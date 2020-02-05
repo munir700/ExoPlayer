@@ -251,7 +251,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
       return;
     }
     handler.sendEmptyMessage(MSG_RELEASE);
-    boolean wasInterrupted = false;
+    /*boolean wasInterrupted = false;
     while (!released) {
       try {
         wait();
@@ -259,10 +259,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
         wasInterrupted = true;
       }
     }
+
     if (wasInterrupted) {
       // Restore the interrupted status.
       Thread.currentThread().interrupt();
-    }
+    }*/
+    Thread.currentThread().interrupt();
   }
 
   public Looper getPlaybackLooper() {

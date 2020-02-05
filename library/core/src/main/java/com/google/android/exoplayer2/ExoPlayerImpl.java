@@ -438,13 +438,13 @@ import java.util.concurrent.CopyOnWriteArrayList;
         + ExoPlayerLibraryInfo.registeredModules() + "]");
     mediaSource = null;
     internalPlayer.release();
-    eventHandler.removeCallbacksAndMessages(null);
+    /*eventHandler.removeCallbacksAndMessages(null);
     playbackInfo =
         getResetPlaybackInfo(
-            /* resetPosition= */ false,
-            /* resetState= */ false,
-            /* resetError= */ false,
-            /* playbackState= */ Player.STATE_IDLE);
+            *//* resetPosition= *//* false,
+            *//* resetState= *//* false,
+            *//* resetError= *//* false,
+            *//* playbackState= *//* Player.STATE_IDLE);*/
   }
 
   @Override
