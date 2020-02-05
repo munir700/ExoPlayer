@@ -250,7 +250,8 @@ import java.util.concurrent.atomic.AtomicBoolean;
     if (released || !internalPlaybackThread.isAlive()) {
       return;
     }
-    handler.sendEmptyMessage(MSG_RELEASE);
+    internalPlaybackThread.quit();
+//    handler.sendEmptyMessage(MSG_RELEASE);
     /*boolean wasInterrupted = false;
     while (!released) {
       try {
