@@ -250,7 +250,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
     if (released || !internalPlaybackThread.isAlive()) {
       return;
     }
-    internalPlaybackThread.quit();
+    releaseInternal();
 //    handler.sendEmptyMessage(MSG_RELEASE);
     /*boolean wasInterrupted = false;
     while (!released) {
@@ -864,12 +864,12 @@ import java.util.concurrent.atomic.AtomicBoolean;
   }
 
   private void releaseInternal() {
-    resetInternal(
-        /* resetRenderers= */ true,
-        /* releaseMediaSource= */ true,
-        /* resetPosition= */ true,
-        /* resetState= */ true,
-        /* resetError= */ false);
+    /*resetInternal(
+        *//* resetRenderers= *//* true,
+        *//* releaseMediaSource= *//* true,
+        *//* resetPosition= *//* true,
+        *//* resetState= *//* true,
+        *//* resetError= *//* false);*/
     loadControl.onReleased();
     setState(Player.STATE_IDLE);
     internalPlaybackThread.quit();

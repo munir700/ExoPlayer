@@ -710,7 +710,7 @@ public class MediaCodecVideoRenderer extends MediaCodecRenderer {
   @Override
   protected void releaseCodec() {
     try {
-      super.releaseCodec();
+//      super.releaseCodec();
     } finally {
       buffersInCodecCount = 0;
     }
